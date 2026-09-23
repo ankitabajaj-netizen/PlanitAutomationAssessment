@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="75.838" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-23T00:15:41.193250200Z">
+<testcase classname="Contact form submission" name="Submitting a fully populated form succeeds - #1.1" time="24.7">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I populate the mandatory fields with forename "Ankita", email "ankita.tester.1@example.com" and message "Automated contact form run 1 of 5".passed
+And I submit the contact form...............................................passed
+Then I should see the successful submission message for "Ankita"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact form submission" name="Submitting a fully populated form succeeds - #1.2" time="4.815">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I populate the mandatory fields with forename "Ankita", email "ankita.tester.2@example.com" and message "Automated contact form run 2 of 5".passed
+And I submit the contact form...............................................passed
+Then I should see the successful submission message for "Ankita"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact form submission" name="Submitting a fully populated form succeeds - #1.3" time="18.809">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I populate the mandatory fields with forename "Ankita", email "ankita.tester.3@example.com" and message "Automated contact form run 3 of 5".passed
+And I submit the contact form...............................................passed
+Then I should see the successful submission message for "Ankita"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact form submission" name="Submitting a fully populated form succeeds - #1.4" time="8.082">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I populate the mandatory fields with forename "Ankita", email "ankita.tester.4@example.com" and message "Automated contact form run 4 of 5".passed
+And I submit the contact form...............................................passed
+Then I should see the successful submission message for "Ankita"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact form submission" name="Submitting a fully populated form succeeds - #1.5" time="10.002">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I populate the mandatory fields with forename "Ankita", email "ankita.tester.5@example.com" and message "Automated contact form run 5 of 5".passed
+And I submit the contact form...............................................passed
+Then I should see the successful submission message for "Ankita"............passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact form validation" name="Submitting an empty form shows validation errors that clear once corrected" time="3.611">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I navigate to the Contact page.........................................passed
+When I submit the contact form..............................................passed
+Then I should see validation errors for the mandatory fields................passed
+When I populate the mandatory fields with forename "John", email "john.doe@example.com" and message "This is a test message".passed
+Then the validation errors should no longer be displayed....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="Cart shows correct prices, subtotals and total for the purchased products" time="5.355">
+<system-out><![CDATA[
+Given I am on the Jupiter Toys home page....................................passed
+When I go to the shop page..................................................passed
+And I buy 2 "Stuffed Frog"..................................................passed
+And I buy 5 "Fluffy Bunny"..................................................passed
+And I buy 3 "Valentine Bear"................................................passed
+And I go to the cart page...................................................passed
+Then the price and subtotal for each purchased product should be correct....passed
+And the cart total should equal the sum of the product subtotals............passed
+]]></system-out>
+</testcase>
+</testsuite>
